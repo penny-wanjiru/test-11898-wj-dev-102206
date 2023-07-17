@@ -26,6 +26,24 @@ function api_v1_book_partial_update(payload) {
 function api_v1_book_destroy(payload) {
   return testwjdevAPI.delete(`/api/v1/book/${payload.id}/`)
 }
+function api_v1_home_list(payload) {
+  return testwjdevAPI.get(`/api/v1/home/`)
+}
+function api_v1_home_create(payload) {
+  return testwjdevAPI.post(`/api/v1/home/`, payload)
+}
+function api_v1_home_retrieve(payload) {
+  return testwjdevAPI.get(`/api/v1/home/${payload.id}/`)
+}
+function api_v1_home_update(payload) {
+  return testwjdevAPI.put(`/api/v1/home/${payload.id}/`, payload)
+}
+function api_v1_home_partial_update(payload) {
+  return testwjdevAPI.patch(`/api/v1/home/${payload.id}/`, payload)
+}
+function api_v1_home_destroy(payload) {
+  return testwjdevAPI.delete(`/api/v1/home/${payload.id}/`)
+}
 function api_v1_login_create(payload) {
   return testwjdevAPI.post(`/api/v1/login/`, payload)
 }
@@ -73,6 +91,12 @@ export const apiService = {
   api_v1_book_update,
   api_v1_book_partial_update,
   api_v1_book_destroy,
+  api_v1_home_list,
+  api_v1_home_create,
+  api_v1_home_retrieve,
+  api_v1_home_update,
+  api_v1_home_partial_update,
+  api_v1_home_destroy,
   api_v1_login_create,
   api_v1_signup_create,
   rest_auth_login_create,
