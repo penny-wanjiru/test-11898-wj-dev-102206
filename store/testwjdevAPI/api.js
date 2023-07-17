@@ -8,6 +8,24 @@ function api_docs_schema_retrieve(payload) {
     params: { lang: payload.lang }
   })
 }
+function api_v1_book_list(payload) {
+  return testwjdevAPI.get(`/api/v1/book/`)
+}
+function api_v1_book_create(payload) {
+  return testwjdevAPI.post(`/api/v1/book/`, payload)
+}
+function api_v1_book_retrieve(payload) {
+  return testwjdevAPI.get(`/api/v1/book/${payload.id}/`)
+}
+function api_v1_book_update(payload) {
+  return testwjdevAPI.put(`/api/v1/book/${payload.id}/`, payload)
+}
+function api_v1_book_partial_update(payload) {
+  return testwjdevAPI.patch(`/api/v1/book/${payload.id}/`, payload)
+}
+function api_v1_book_destroy(payload) {
+  return testwjdevAPI.delete(`/api/v1/book/${payload.id}/`)
+}
 function api_v1_login_create(payload) {
   return testwjdevAPI.post(`/api/v1/login/`, payload)
 }
@@ -49,6 +67,12 @@ function rest_auth_user_partial_update(payload) {
 }
 export const apiService = {
   api_docs_schema_retrieve,
+  api_v1_book_list,
+  api_v1_book_create,
+  api_v1_book_retrieve,
+  api_v1_book_update,
+  api_v1_book_partial_update,
+  api_v1_book_destroy,
   api_v1_login_create,
   api_v1_signup_create,
   rest_auth_login_create,
