@@ -9,7 +9,7 @@ class Home(models.Model):
     'Generated Model'
     name = models.CharField(max_length=255,)
     def full_name(self):
-        print("nam")
+        print('nam')
 class Trial(models.Model):
     'Generated Model'
     fasf = models.BigIntegerField()
@@ -22,3 +22,5 @@ class Trial(models.Model):
     hree = models.BigIntegerField()
     rgee = models.BigIntegerField()
     jtyj = models.BigIntegerField()
+    def last_name(self):
+        print("hello wrld")
