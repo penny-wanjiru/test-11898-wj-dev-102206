@@ -10,3 +10,15 @@ class Home(models.Model):
     name = models.CharField(max_length=255,)
     def full_name(self):
         print("nam")
+class Trial(models.Model):
+    'Generated Model'
+    fasf = models.BigIntegerField()
+    faefa = models.BigIntegerField()
+    geg = models.BigIntegerField()
+    hrthrhg = models.BigIntegerField()
+    hrth = models.BigIntegerField()
+    hrh = models.BigIntegerField()
+    rhrhjt = models.BigIntegerField()
+    hree = models.BigIntegerField()
+    rgee = models.BigIntegerField()
+    jtyj = models.BigIntegerField()

@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Book,Home
-from .serializers import BookSerializer,HomeSerializer
+from home.models import Book,Home,Trial
+from .serializers import BookSerializer,HomeSerializer,TrialSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -42,3 +42,8 @@ class HomeViewSet(viewsets.ModelViewSet):
     serializer_class = HomeSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Home.objects.all()
+
+class TrialViewSet(viewsets.ModelViewSet):
+    serializer_class = TrialSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Trial.objects.all()
