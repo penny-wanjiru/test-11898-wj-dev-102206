@@ -50,6 +50,24 @@ function api_v1_login_create(payload) {
 function api_v1_signup_create(payload) {
   return testwjdevAPI.post(`/api/v1/signup/`, payload)
 }
+function api_v1_trial_list(payload) {
+  return testwjdevAPI.get(`/api/v1/trial/`)
+}
+function api_v1_trial_create(payload) {
+  return testwjdevAPI.post(`/api/v1/trial/`, payload)
+}
+function api_v1_trial_retrieve(payload) {
+  return testwjdevAPI.get(`/api/v1/trial/${payload.id}/`)
+}
+function api_v1_trial_update(payload) {
+  return testwjdevAPI.put(`/api/v1/trial/${payload.id}/`, payload)
+}
+function api_v1_trial_partial_update(payload) {
+  return testwjdevAPI.patch(`/api/v1/trial/${payload.id}/`, payload)
+}
+function api_v1_trial_destroy(payload) {
+  return testwjdevAPI.delete(`/api/v1/trial/${payload.id}/`)
+}
 function rest_auth_login_create(payload) {
   return testwjdevAPI.post(`/rest-auth/login/`, payload)
 }
@@ -99,6 +117,12 @@ export const apiService = {
   api_v1_home_destroy,
   api_v1_login_create,
   api_v1_signup_create,
+  api_v1_trial_list,
+  api_v1_trial_create,
+  api_v1_trial_retrieve,
+  api_v1_trial_update,
+  api_v1_trial_partial_update,
+  api_v1_trial_destroy,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
   rest_auth_logout_create,
