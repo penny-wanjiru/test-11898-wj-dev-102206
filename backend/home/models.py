@@ -9,4 +9,4 @@ class Home(models.Model):
     'Generated Model'
     name = models.CharField(max_length=255,)
     def full_name(self):
-        print("name")
+        print("nam")
