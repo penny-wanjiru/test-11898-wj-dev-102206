@@ -27,4 +27,7 @@ class Trial(models.Model):
 class Country(models.Model):
     'Generated Model'
     name = models.CharField(max_length=255,)
-    map = models.ImageField(upload_to="Country/map/images/",)
+class Reads(models.Model):
+    'Generated Model'
+    pub_date = models.DateField()
+    front_page = models.ImageField(upload_to="Reads/front_page/images/",)

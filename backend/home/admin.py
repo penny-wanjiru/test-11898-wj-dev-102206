@@ -1,8 +1,9 @@
 from django.contrib import admin
-from .models import Book,Country,Home,Trial
+from .models import Book,Country,Home,Reads,Trial
 admin.site.register(Book)
 admin.site.register(Home)
 admin.site.register(Trial)
 admin.site.register(Country)
+admin.site.register(Reads)
 
 # Register your models here.

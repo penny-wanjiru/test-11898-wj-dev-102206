@@ -1,4 +1,4 @@
-from .models import Home, Trial, Book
+from .models import Home, Book, Trial, Country
 from django.views.generic import CreateView, UpdateView, DetailView, ListView
 from django.shortcuts import render
 
