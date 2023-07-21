@@ -65,6 +65,24 @@ function api_v1_home_destroy(payload) {
 function api_v1_login_create(payload) {
   return testwjdevAPI.post(`/api/v1/login/`, payload)
 }
+function api_v1_reads_list(payload) {
+  return testwjdevAPI.get(`/api/v1/reads/`)
+}
+function api_v1_reads_create(payload) {
+  return testwjdevAPI.post(`/api/v1/reads/`, payload)
+}
+function api_v1_reads_retrieve(payload) {
+  return testwjdevAPI.get(`/api/v1/reads/${payload.id}/`)
+}
+function api_v1_reads_update(payload) {
+  return testwjdevAPI.put(`/api/v1/reads/${payload.id}/`, payload)
+}
+function api_v1_reads_partial_update(payload) {
+  return testwjdevAPI.patch(`/api/v1/reads/${payload.id}/`, payload)
+}
+function api_v1_reads_destroy(payload) {
+  return testwjdevAPI.delete(`/api/v1/reads/${payload.id}/`)
+}
 function api_v1_signup_create(payload) {
   return testwjdevAPI.post(`/api/v1/signup/`, payload)
 }
@@ -140,6 +158,12 @@ export const apiService = {
   api_v1_home_partial_update,
   api_v1_home_destroy,
   api_v1_login_create,
+  api_v1_reads_list,
+  api_v1_reads_create,
+  api_v1_reads_retrieve,
+  api_v1_reads_update,
+  api_v1_reads_partial_update,
+  api_v1_reads_destroy,
   api_v1_signup_create,
   api_v1_trial_list,
   api_v1_trial_create,
