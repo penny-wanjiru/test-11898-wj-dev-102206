@@ -26,6 +26,24 @@ function api_v1_book_partial_update(payload) {
 function api_v1_book_destroy(payload) {
   return testwjdevAPI.delete(`/api/v1/book/${payload.id}/`)
 }
+function api_v1_country_list(payload) {
+  return testwjdevAPI.get(`/api/v1/country/`)
+}
+function api_v1_country_create(payload) {
+  return testwjdevAPI.post(`/api/v1/country/`, payload)
+}
+function api_v1_country_retrieve(payload) {
+  return testwjdevAPI.get(`/api/v1/country/${payload.id}/`)
+}
+function api_v1_country_update(payload) {
+  return testwjdevAPI.put(`/api/v1/country/${payload.id}/`, payload)
+}
+function api_v1_country_partial_update(payload) {
+  return testwjdevAPI.patch(`/api/v1/country/${payload.id}/`, payload)
+}
+function api_v1_country_destroy(payload) {
+  return testwjdevAPI.delete(`/api/v1/country/${payload.id}/`)
+}
 function api_v1_home_list(payload) {
   return testwjdevAPI.get(`/api/v1/home/`)
 }
@@ -109,6 +127,12 @@ export const apiService = {
   api_v1_book_update,
   api_v1_book_partial_update,
   api_v1_book_destroy,
+  api_v1_country_list,
+  api_v1_country_create,
+  api_v1_country_retrieve,
+  api_v1_country_update,
+  api_v1_country_partial_update,
+  api_v1_country_destroy,
   api_v1_home_list,
   api_v1_home_create,
   api_v1_home_retrieve,
