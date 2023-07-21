@@ -30,4 +30,6 @@ class Country(models.Model):
 class Reads(models.Model):
     'Generated Model'
     pub_date = models.DateField()
-    front_page = models.ImageField(upload_to="Reads/front_page/images/",)
+class Test(models.Model):
+    'Generated Model'
+    photo = models.ImageField(upload_to="Test/photo/images/",)
