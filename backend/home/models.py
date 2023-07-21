@@ -8,7 +8,6 @@ class Book(models.Model):
 class Home(models.Model):
     'Generated Model'
     name = models.CharField(max_length=255,)
-    icon = models.ImageField(upload_to="Home/icon/images/",null=True,blank=True,)
     def full_name(self):
         print('nam')
 class Trial(models.Model):
@@ -25,3 +24,7 @@ class Trial(models.Model):
     jtyj = models.BigIntegerField()
     def last_name(self):
         print('hello wrld')
+class Country(models.Model):
+    'Generated Model'
+    name = models.CharField(max_length=255,)
+    map = models.ImageField(upload_to="Country/map/images/",)
