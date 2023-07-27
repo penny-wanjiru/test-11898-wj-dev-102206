@@ -33,3 +33,6 @@ class Reads(models.Model):
 class Test(models.Model):
     'Generated Model'
     photo = models.ImageField(upload_to="Test/photo/images/",)
+class Profile(models.Model):
+    'Generated Model'
+    photo = models.ImageField(upload_to="prof/photo/images/",)
